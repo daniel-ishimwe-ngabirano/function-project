@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Hub</title>
+    <link rel="icon" href="hub.png">
+    <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+    <header>
+            <img src="hub.png" class="bro" >
+        <div class="logo">Fashion Hub</div>
+        <nav class="navbar">
+            <a href="home of hub.html">Home</a>
+            <a href="dresses.html">Dresses</a>
+            <a href="shirts.html">Shirts</a>
+            <a href="accesories.html">Accessories</a>
+            <a href="contact.html">Contact</a>
+            <label class="switch">
+                <input type="checkbox" id="bgToggle" onclick="toggleBackground()" />
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Fashion Hub</h1>
+        <p>Your one-stop shop for trendy clothing and accessories.</p>
+    </section>
+
+    <section class="products">
+        <div class="product" style="border-radius: 2rem;">
+            <a href="dresses.html"><img src="mannequin-wearing.jpg"   style="border-radius: 2rem;"></a>
+            <h2>Stylish Dress</h2>
+            <p>$49.99</p>
+        </div>
+        <div class="product" style="border-radius: 2rem;">
+            <a href="sweater.html"><img src="yfy.jpg"  style="border-radius: 2rem;"></a>
+            <h2>Casual Shirt</h2>
+            <p>$29.99</p>
+        </div>
+        <div class="product" style="border-radius: 2rem;">
+            <a href="accesories.html"><img  src="flat-lay-fashion-collage-with-women-modern-bijouterie-cosmetics-white-surface_408798-1257.jpg"  style="border-radius: 2rem;"></a>
+            <h2>Fashion Accessory</h2>
+            <p>$19.99</p>
+        </div>
+        <div class="product" style="border-radius: 2rem;">
+            <a href="dresses.html"><img  src="one.avif"  style="border-radius: 2rem;"></a>
+            <h2>Fashion Accessory</h2>
+            <p>$89.99</p>
+        </div>
+        <div class="product" style="border-radius: 2rem;">
+            <a href="dresses.html"><img  src="colorfulsss.avif"  style="border-radius: 2rem;"></a>
+            <h2>Fashion Accessory</h2>
+            <p>$5.47</p>
+        </div>
+        <div class="product" style="border-radius: 2rem;">
+            <a href="shirts.html"><img  src="black-friday.avif"  style="border-radius: 2rem;"></a>
+            <h2>Fashion Accessory</h2>
+            <p>$50.4</p>
+        </div>
+        <div class="product" style="border-radius: 2rem;">
+            <a href="shirts.html"><img  src="warning.jpg"  style="border-radius: 2rem;"></a>
+            <h2>Fashion Accessory</h2>
+            <p>$5.41</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fashion Hub. All rights reserved.</p>
+    </footer>
+     <script>
+    function toggleBackground() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>

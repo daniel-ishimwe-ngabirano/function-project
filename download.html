@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Download Image - Fashion Hub</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding: 50px;
+      background-color: #f4f4f4;
+    }
+    img {
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .download-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      color: white;
+      background-color: #007BFF;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .download-btn:hover {
+      background-color: #0056b3;
+    }
+    .back-link {
+      display: block;
+      margin-top: 30px;
+      color: #333;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Download Your Shirt</h1>
+  <img id="image" src="" alt="Selected Shirt" />
+  <br />
+  <a id="downloadLink" class="download-btn" download>Download Image</a>
+  <a class="back-link" href="shirts.html">← Back to Shirts</a>
+  <a class="back-link" href="dresses.html">← Back to dresses</a>
+  <a class="back-link" href="accesories.html">← Back to accesories</a>
+  <a class="back-link" href="home of hub.html">← Go Home</a>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const imgSrc = params.get("img");
+
+    if (imgSrc) {
+      const image = document.getElementById("image");
+      const downloadLink = document.getElementById("downloadLink");
+
+      image.src = imgSrc;
+      downloadLink.href = imgSrc;
+
+      const fileName = imgSrc.split("/").pop();
+      downloadLink.download = fileName;
+    } else {
+      document.body.innerHTML = "<h2>No image selected.</h2><a href='shirts.html'>Go back</a>";
+    }
+  </script>
+</body>
+</html>

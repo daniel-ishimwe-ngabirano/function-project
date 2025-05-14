@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sweater</title>
+    <link rel="icon" href="hub.png">
+    <style>
+        /* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+      height: 160rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+      background-color: white;
+      color: black;
+      flex-wrap: wrap;
+    }
+
+    body.dark-mode {
+      background-color: #000;
+      color: #fff;
+    }
+    nav a {
+      position: relative;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #ffe600;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    }
+
+    nav a:hover {
+      color: #ffe600;
+    }
+
+    nav a:hover::before {
+      transform: scaleX(1);
+    }
+
+.bro{
+    width: 80px;
+    height: 60px;
+    margin-left: 2rem;
+    margin-top: -9px;
+}
+
+header {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    color: red;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+}
+.switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 34px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 20px;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 44px;
+    }
+
+    .slider:before {
+      content: "";
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 2px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 47%;
+}
+
+
+.navbar a {
+    color: red;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    backdrop-filter: blur(10%);
+}
+h1{
+      animation: bounce 2s ease;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+.page-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 200;
+    padding: 40px 20px;
+    
+}
+
+.page-section {
+    width: 30%;
+    margin: 15px 0;
+    text-align: center;
+    
+}
+
+.page-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+}
+.page-section:hover {
+      transform: scale(1.1);
+      transition: 1s ease-in;
+      animation: both;
+    }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: none;
+    color: red;
+    position: sticky;
+    bottom: 0;
+    margin-top: 15.6%;
+    backdrop-filter: blur(40px);
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .page-section {
+        width: 45%;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        margin-left: 20%;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    .page-section {
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-left: 10%;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="hub.png" class="bro" >
+        <div class="logo">Fashion Hub</div>
+        <nav class="navbar">
+            <a href="home of hub.html">Home</a>
+            <a href="dresses.html">Dresses</a>
+            <a href="shirts.html">Shirts</a>
+            <a href="accesories.html">Accessories</a>
+            <a href="contact.html">Contact</a>
+            <label class="switch">
+                <input type="checkbox" id="bgToggle" onclick="toggleBackground()" />
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explore Our sweater</h1>
+    </section>
+
+    <section class="page-content">
+        <div class="page-section">
+            <img src="sweater-isolated_1203-8088.avif" alt="Shirt 1">
+            <h2>White Button-Up</h2>
+            <p>$39.99</p>
+        </div>
+        <div class="page-section">
+            <img src="sweater-wooden.jpg" alt="Shirt 2">
+            <h2>Graphic Tee</h2>
+            <p>$24.99</p>
+        </div>
+        <div class="page-section">
+            <img src="sweater_87394-34375.avif" alt="Shirt 2">
+            <h2>Graphic Tee</h2>
+            <p>$24.99</p>
+        </div> <div class="page-section">
+            <img src="texture-black-sweater_1268-28556.avif" alt="Shirt 1">
+            <h2>White Button-Up</h2>
+            <p>$39.99</p>
+        </div>
+        <div class="page-section">
+            <img src="yfy.jpg" alt="Shirt 2">
+            <h2>Graphic Tee</h2>
+            <p>$24.99</p>
+        </div>
+        <div class="page-section">
+            <img src="beautiful-woman.jpg" alt="Shirt 2">
+            <h2>Graphic Tee</h2>
+            <p>$24.99</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fashion Hub. All rights reserved.</p>
+    </footer>
+    <script>
+    function toggleBackground() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
